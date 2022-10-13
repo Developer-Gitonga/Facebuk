@@ -21,16 +21,17 @@ function Header() {
     return (
       <div>
             {/* left */}
-            <div>
+            <div className='flex items-center'>
                 <Image className='p-10'
                     src={Headerpic}
                     width={40}
                     height={40}
                     layout="fixed"
                 />
-                <div className='flex'>
+                <div className='flex items-center p-2 ml-2 bg-gray-100 rounded-fullayout'>
                     <SearchIcon className="h-6"/>
-                    <input type="text" placeholder="Search Facebook"/>
+                    <input className="flex items-center ml-2 bg-transparent outline-none"
+                        type="text" placeholder="Search Facebook" />
                 </div>
             </div>
         {/* center */}
@@ -40,3 +41,4 @@ function Header() {
 }
 
 export default Header
+ 
