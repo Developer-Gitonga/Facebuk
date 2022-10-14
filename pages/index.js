@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import { unstable_getServerSession } from 'next-auth'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import Sidebar from '../components/Sidebar'
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
 
       <main>
         {/* Sidebar */}
+        <Sidebar/>
         {/* Feed */}
         {/* Widgets */}
       </main>
