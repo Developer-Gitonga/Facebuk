@@ -6,7 +6,7 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['www.flaticon.com'],
+    domains: ['firebasestorage.googleapis.com'],
   },
 }
 
