@@ -8,7 +8,11 @@ import {
   UserGroupIcon,
   UsersIcon,
   ViewGridIcon,
-} from "@heroicons/react/solid"
+  CalendarIcon,
+  ClockIcon,
+  ShoppingBagIcon,
+  DesktopComputerIcon,
+} from "@heroicons/react/solid";
 import {
   FlagIcon,
   PlayIcon,
@@ -24,10 +28,10 @@ function Sidebar() {
           <SidebarRow src={UserPic} title="User"/>
       <SidebarRow Icon={UsersIcon} title="Friends" />
       <SidebarRow Icon={UserGroupIcon} title="Groups" />
-      {/* <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />
+      <SidebarRow Icon={ShoppingBagIcon} title="Marketplace" />
       <SidebarRow Icon={DesktopComputerIcon} title="Watch" />
       <SidebarRow Icon={CalendarIcon} title="Events" />
-      <SidebarRow Icon={ClockIcon} title="Memories" /> */}
+      <SidebarRow Icon={ClockIcon} title="Memories" />
       <SidebarRow Icon={ChevronDownIcon} title="See More" />
     </div>
   );

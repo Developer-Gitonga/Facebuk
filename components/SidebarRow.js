@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function SidebarRow({ src, Icon, title }) {
   return (
-      <div>
+      <div className='flex items-center p-4 space-x-2 cursor-pointer hover:bg-gray-200 rounded-xl'>
           {src && (
               <Image
                   className="rounded-full"
