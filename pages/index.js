@@ -4,26 +4,26 @@ import Header from '../components/Header'
 import { unstable_getServerSession } from 'next-auth'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
 
 
 export default function Home() {
   // if (!session) return <Login />
   
   return (
-    <div>
+    <div className='h-screen overflow-hidden bg-gray-100'>
       <Head>
         <title>Facebook</title>
-        <meta name="description" content="Connect and network for free" />
         <link rel="icon" href="facebook.png" />
       </Head>
       {/* Header */}
       <Header />
       
-
       <main>
         {/* Sidebar */}
         <Sidebar/>
         {/* Feed */}
+        <Feed />
         {/* Widgets */}
       </main>
     </div>

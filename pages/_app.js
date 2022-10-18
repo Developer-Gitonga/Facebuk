@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-// import { SessionProvider } from "next-auth"
 
 function MyApp({ Component, pageProps}) {
   return (
