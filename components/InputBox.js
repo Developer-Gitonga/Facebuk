@@ -3,9 +3,28 @@ import Image from 'next/image'
 import UserPic from '../public/user.png'
 import { EmojiHappyIcon } from "@heroicons/react/outline"
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid"
+import { useRef } from "react"
+import { userAgent } from 'next/server'
+import { FirebaseError } from 'firebase/app'
 
 
 function InputBox() {
+
+  const inputRef = useRef(null)
+  const sendPost = (e) => {
+    e.preventDefault();
+  
+    if (!inputRef.current.value) return;
+  
+    db.collection('posts').add[{
+      message: inputRef.current.value,
+      name: user.name,
+      email: user.email,
+      image: user.image,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }]
+  }
+  
   return (
     <div className="p-2 mt-6 font-medium text-gray-500 bg-white shadow-md rounded-2xl">
       <div className="flex items-center p-4 space-x-4">
@@ -20,6 +39,7 @@ function InputBox() {
           <input
             className="flex-grow h-12 px-5 bg-gray-100 rounded-full focus:outline-none"
             type="text"
+            ref={inputRef}
             placeholder="What's currently on your mind"
           />
           <button hidden type="submit">
