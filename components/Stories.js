@@ -30,11 +30,9 @@ const stories = [
   },
 ];
 
-export default function Stories() {
+function Stories() {
   return (
-      <div className='flex justify-center mx-auto space-x-3'>
-          <h1>Test</h1>
-          {stories.map(story => (
+      <div className='flex justify-center mx-auto space-x-3 hover:'>          {stories.map(story => (
           <StoryCard key={story.src}
               name={story.name}
               src={story.src}
@@ -45,3 +43,4 @@ export default function Stories() {
   )
 }
 
+export default Stories

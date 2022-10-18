@@ -19,7 +19,7 @@ export default function Home() {
       {/* Header */}
       <Header />
       
-      <main>
+      <main className='flex'>
         {/* Sidebar */}
         <Sidebar/>
         {/* Feed */}
