@@ -4,9 +4,8 @@ import UserPic from '../public/user.png'
 import { EmojiHappyIcon } from "@heroicons/react/outline"
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid"
 import { useRef } from "react"
-import { userAgent } from 'next/server'
-import { FirebaseError } from 'firebase/app'
-
+import { db } from '../firebase'
+// import firebase from 'firebase'
 
 function InputBox() {
 
@@ -23,6 +22,7 @@ function InputBox() {
       image: user.image,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     }]
+    inputRef.current.value = ""; 
   }
   
   return (
