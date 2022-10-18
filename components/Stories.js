@@ -1,5 +1,6 @@
-import { SERVER_DIRECTORY } from 'next/dist/shared/lib/constants';
 import React from 'react'
+import StoryCard from "./StoryCard"
+
 
 const stories = [
   {
@@ -31,10 +32,15 @@ const stories = [
 
 export default function Stories() {
   return (
-      <div className='flex justify-center mx-auto space-x-3'>{stories.map(story => (
-          <StoryCard name={story.name} src={story.src} profile={story.profile} />
+      <div className='flex justify-center mx-auto space-x-3'>
+          <h1>Test</h1>
+          {stories.map(story => (
+          <StoryCard key={story.src}
+              name={story.name}
+              src={story.src}
+              profile={story.profile}
+          />
       ))}
-      
         </div>
   )
 }
