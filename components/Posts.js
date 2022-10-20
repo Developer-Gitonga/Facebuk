@@ -4,12 +4,12 @@ import { db } from "../firebase"
 import Post from './Post'
 
 function Posts() {
-    const [realtimePosts, loading, error] = useCollection(
+    const [realtimePosts] = useCollection(
         db.collection("posts").orderBy("timestamp", "desc")
     )
     return (
     <div>
-        {realtimePosts.docs.map((post) => (
+        {realtimePosts?.docs.map((post) => (
                     <Post
                         key={post.id}
                         name={post.data().name}
