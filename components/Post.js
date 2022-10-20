@@ -30,15 +30,15 @@ function Post({ name, message, email, postImage, image, timestamp }) {
       )}
       {/* Footer of post */}
       <div className="flex items-center justify-between text-gray-400 bg-white border shadow-md rounded-b-2xl-t">
-        <div className="inputIcon">
+        <div className="rounded-none rounded-bl-2xl inputIcon">
           <ThumbUpIcon className="h-4" />
           <p className="text-xs sm:text-base">Like</p>
         </div>
-        <div className="inputIcon">
+        <div className="rounded-none inputIcon">
           <ChatAltIcon className="h-4" />
           <p className="text-xs sm:text-base">Comment</p>
         </div>
-        <div className="inputIcon">
+        <div className="rounded-none inputIcon rounded-br-2xl">
           <ShareIcon className="h-4" />
           <p className="text-xs sm:text-base">Share</p>
         </div>
