@@ -5,6 +5,7 @@ import { unstable_getServerSession } from 'next-auth'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
+import Widgets from '../components/Widgets'
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         {/* Feed */}
         <Feed />
         {/* Widgets */}
+        <Widgets />
       </main>
     </div>
   );
