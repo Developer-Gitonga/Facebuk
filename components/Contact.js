@@ -1,6 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 
-function Contact() {
+function Contact({ src, name }) {
   return (
     <div>Contact</div>
   )

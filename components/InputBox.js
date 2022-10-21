@@ -3,13 +3,16 @@ import Image from 'next/image'
 import UserPic from '../public/user.png'
 import { EmojiHappyIcon } from "@heroicons/react/outline"
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { db } from '../firebase'
 // import firebase from 'firebase'
 
 function InputBox() {
 
   const inputRef = useRef(null)
+  const filepickerRef = useRef(null)
+// const [imageToPost, setImageToPost] = useState(null)
+  
   const sendPost = (e) => {
     e.preventDefault();
   
@@ -24,6 +27,16 @@ function InputBox() {
     }]
     inputRef.current.value = ""; 
   }
+  
+  // const addImageToPost = (e) => (
+  //   const reader = new FileReader();
+  //   if (e.target.files[0]) {
+  //     reader.readAsDataURL(e.target.files[0])
+  //     reader.onload = (readerEvent) => {
+  //       setImageToPost(readerEvent.target.results)
+  //     }
+  //   }
+  // )
   
   return (
     <div className="p-2 mt-6 font-medium text-gray-500 bg-white shadow-md rounded-2xl">
