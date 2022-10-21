@@ -1,7 +1,8 @@
 import React from 'react'
 import { SearchIcon } from "@heroicons/react/outline"
 import { DotsHorizontalIcon, VideoCameraIcon } from "@heroicons/react/solid"
-import Contact from './Contact';
+import Contact from './Contact'
+
 
 const contacts = [
   { src: "https://links.papareact.com/f0p", name: "Jeff Bezos" },
@@ -25,7 +26,10 @@ function Widgets() {
         </div>
           </div>
           {contacts.map((contact) => (
-              <Contact key={contact.src} src={contact.src} name={contact.name} />
+            <Contact
+              key={contact.src}
+              src={contact.src}
+              name={contact.name} />
           ))}
     </div>
   );

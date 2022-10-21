@@ -9,7 +9,6 @@ import Widgets from '../components/Widgets'
 
 
 export default function Home() {
-  // if (!session) return <Login />
   
   return (
     <div className='h-screen overflow-hidden bg-gray-100'>

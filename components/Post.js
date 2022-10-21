@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { ThumbUpIcon } from '@heroicons/react/solid';
+import { ThumbUpIcon, ChatAltIcon, ShareIcon } from '@heroicons/react/solid';
+
 
 function Post({ name, message, email, postImage, image, timestamp }) {
   return (
