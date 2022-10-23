@@ -31,16 +31,16 @@ export default function Home() {
   );
 }
 
-// export async function getServerSideProps(context) {
-//   // Get the user
-//   const session = await getSession(context);
+export async function getServerSideProps(context) {
+  // Get the user
+  const session = await getSession(context);
 
-//   return {
-//     props: {
-//       session
-//     }
-//   }
-// }
+  return {
+    props: {
+      session
+    }
+  }
+}
 
 // export async (req, res) => {
 //   const session = await unstable_getServerSession(req, res, authOptions)

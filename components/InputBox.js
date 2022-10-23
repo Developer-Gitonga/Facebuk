@@ -4,7 +4,7 @@ import UserPic from '../public/user.png'
 import { EmojiHappyIcon } from "@heroicons/react/outline"
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid"
 import { useRef, useState } from "react"
-import { db } from '../firebase'
+// import { db } from '../firebase'
 
 function InputBox() {
 
@@ -88,7 +88,7 @@ function InputBox() {
       <div className="flex p-3 border-t justify-evenly">
         <div className="inputIcon">
           <VideoCameraIcon className="text-red-500 h-7" />
-          <p className="text-xs sm:text-sm">Live Video</p>
+          <p className="text-xs sm:text-sm">Live-Video</p>
         </div>
 
         <div className="inputIcon">
